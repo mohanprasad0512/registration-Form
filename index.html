@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <div class="badge">Create Account</div>
+  <h1>Join <span>us</span> today.</h1>
+  <p class="subtitle">Fill in your details below to get started — it only takes a moment.</p>
+
+  <form id="regForm" novalidate>
+
+    <!-- Name -->
+    <div class="field" id="field-name">
+      <label for="name">Full Name</label>
+      <div class="input-wrap">
+        <span class="icon">✦</span>
+        <input type="text" id="name" placeholder="Jane Appleseed" autocomplete="name">
+        <span class="status-icon" id="name-icon"></span>
+      </div>
+      <div class="error-msg" id="name-error">⚠ Name cannot be empty.</div>
+    </div>
+
+    <!-- Email -->
+    <div class="field" id="field-email">
+      <label for="email">Email Address</label>
+      <div class="input-wrap">
+        <span class="icon">@</span>
+        <input type="email" id="email" placeholder="jane@example.com" autocomplete="email">
+        <span class="status-icon" id="email-icon"></span>
+      </div>
+      <div class="error-msg" id="email-error">⚠ Enter a valid email address.</div>
+    </div>
+
+    <!-- Password -->
+    <div class="field" id="field-password">
+      <label for="password">Password</label>
+      <div class="input-wrap">
+        <span class="icon">⬡</span>
+        <input type="password" id="password" placeholder="Min. 6 characters" autocomplete="new-password">
+        <button type="button" class="toggle-pw" id="togglePw" aria-label="Toggle password">👁</button>
+      </div>
+      <div class="strength-bar">
+        <span id="s1"></span><span id="s2"></span>
+        <span id="s3"></span><span id="s4"></span>
+      </div>
+      <div class="strength-label" id="strength-label"></div>
+      <div class="error-msg" id="pw-error">⚠ Password must be at least 6 characters.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <button type="submit" class="submit-btn" id="submitBtn" disabled>
+      Create Account →
+    </button>
+  </form>
+
+  <div class="login-link">Already have an account? <a href="#">Sign in</a></div>
+</div>
+
+<div class="toast" id="toast">🎉 Account created successfully!</div>
+
+<script src="script.js"></script>
+</body>
+</html>
